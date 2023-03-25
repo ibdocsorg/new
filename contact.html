@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ibdocs.org</title>
+<meta name="description" content="ibdocs.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/b17d4fa9e7.js" crossorigin="anonymous"></script>
+</head>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+:root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color:#d49466;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Open Sans'';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ccc;
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar__logo i {
+    color: #d49466;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.navbar__menu li {
+    padding: 2px 12px;
+
+}
+
+.navbar__menu :hover {
+    background: #d49466;
+    border-radius: 4px;
+}
+
+.navbar__toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__toogleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src=./favicon.png width="10%"></img>
+            <a href="./index.html">IB Documents (2)</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./links.html">Links</a></li>
+        </ul>
+
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+<br>
+<script>
+const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    icons.classList.toggle('active')
+});
+</script>
+<!-- Error Page Content -->
+<div class="container">
+    <div class="hero text-center my-4">
+        <h1 class="display-5"><i class="fa fa-folder text-primary mx-3"></i></h1>
+        <h1 class="display-5 fw-bold">ibdocs.org</h1>
+        <p class="lead">Welcome to ibdocs.org, a massive repository with IB Resources.</p>
+    </div>
+
+    <div class="content">
+        <div class="row  justify-content-center py-3">
+            <div class="col-md-6">
+                <div class="my-5 p-5 card">
+                    <h3>See this first.</h3>
+                    <p class="fs-5">This server/website does not host any resources that may violate or infringe any copyrights and/or trademarks.<br>
+We are not responsible for any sort of third party content on any unaffiliated sites that we may provide hyperlinks to.<br>
+We are just providing a gateway link for educational purpose.
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ibdocs.org</title>
+<meta name="description" content="ibdocs.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/b17d4fa9e7.js" crossorigin="anonymous"></script>
+</head>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+:root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color:#d49466;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Open Sans'';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ccc;
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar__logo i {
+    color: #d49466;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.navbar__menu li {
+    padding: 2px 12px;
+
+}
+
+.navbar__menu :hover {
+    background: #d49466;
+    border-radius: 4px;
+}
+
+.navbar__toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__toogleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src=./favicon.png width="10%"></img>
+            <a href="./index.html">IB Documents (2)</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./links.html">Links</a></li>
+        </ul>
+
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+<br>
+<script>
+const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    icons.classList.toggle('active')
+});
+</script>
+<!-- Error Page Content -->
+<div class="container">
+    <div class="hero text-center my-4">
+        <h1 class="display-5"><i class="fa fa-folder text-primary mx-3"></i></h1>
+        <h1 class="display-5 fw-bold">ibdocs.org</h1>
+        <p class="lead">Welcome to ibdocs.org, a massive repository with IB Resources.</p>
+    </div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Official IB Documents (2) Team Telegram Channel</h5>
+        <p class="card-text">Check out IB Documents (2) Team Telegram Channel</p>
+        <a href="https://t.me/ibdocs_2" class="btn btn-primary">Go to Telegram Channel</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Reddit r/pirateIB</h5>
+        <p class="card-text">Reddit community that is dedicated to pirate IB Resources.</p>
+        <a href="https://www.reddit.com/r/pirateIB/" class="btn btn-primary">Go to r/pirateIB</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Discord Support Server</h5>
+        <p class="card-text">Ask questions about IB Resources on Discord Server.</p>
+        <a href="https://discord.gg/KBmXMWm8BR" class="btn btn-primary">Go to 'IB Support Team' Discord Server</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Google Doc</h5>
+        <p class="card-text">A compilation of useful resources for IB students, including YouTube channels, useful websites, etc.</p>
+        <a href="https://cryptpad.fr/pad/#/2/pad/view/eX--pDy1KTgN5JvFNnDHS-ircS4ii+L2Pu4rWdNEQwE/embed/" class="btn btn-primary">Go to Google Doc</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Revision Dojo</h5>
+        <p class="card-text">Contains many past papers, not only from IB but also from many other programmes like A Levels, IGCSE, etc.</p>
+        <a href="http://revisiondojo.com/" class="btn btn-primary">Go to Revision Dojo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">IBResources</h5>
+        <p class="card-text">Contains all past papers since 2016, but you can only view/download one at a time.</p>
+        <a href="http://ibresources.xyz/" class="btn btn-primary">Go to IBResources</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Pestle</h5>
+        <p class="card-text">Complete questionbank up to 2018, but only for some Math and Science subjects.</p>
+        <a href="https://pestle-ib.firebaseapp.com/" class="btn btn-primary">Go to Pestle</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">HackIB</h5>
+        <p class="card-text">Blog with very useful tips for ToK Essay & Exhibition</p>
+        <a href="https://hackib.com/" class="btn btn-primary">Go to HackIB</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">IB Review Resources [Sciences]</h5>
+        <p class="card-text">Website with useful resources for revising IB Biology and Chemistry.</p>
+        <a href="https://mysciencesquad.weebly.com/ib-exam-review.html" class="btn btn-primary">Go to IB Review Resources [Sciences]</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">IB Review Resources [Economics]</h5>
+        <p class="card-text">Website with useful resources for revising IB Economics (check the cascading menu on top).</p>
+        <a href="https://vsa-jlai.weebly.com/ib-economics.html" class="btn btn-primary">Go to IB Review Resources [Economics]</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Tick Ninja</h5>
+        <p class="card-text">Website compiling notes for different subjects and topics, written by IB students.</p>
+        <a href="https://tick.ninja/course/2" class="btn btn-primary">Go to Tick Ninja</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">The IB Enigma</h5>
+        <p class="card-text">A collection of student notes and tips for the International Baccalaureate</p>
+        <a href="https://www.ibenigma.com/" class="btn btn-primary">Go to The IB Enigma</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
